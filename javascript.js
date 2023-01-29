@@ -36,3 +36,11 @@ function operate(operator, num1, num2) {
         return 'Invalid operator';
     }
 }
+
+function populateDisplay (num) {
+    let display = document.getElementById('display');
+    currentText = display.textContent;
+    display.textContent = num;
+}
+
+populateDisplay(1);
