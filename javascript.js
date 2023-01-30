@@ -187,49 +187,57 @@ document.getElementById('equal-btn').addEventListener('click', function(){
 });
 
 document.getElementById('addition-btn').addEventListener('click', function(){
-    if (previousNumber != null) {
-        previousNumber = operate(operator,previousNumber,currentNumber).toString();
+    if (currentNumber != null){
+        if (previousNumber != null) {
+            previousNumber = operate(operator,previousNumber,currentNumber).toString();
+        }
+        else {
+            previousNumber = currentNumber;
+        }
+        currentNumber = null;
+        operator = '+';
+        populateDisplay();
     }
-    else {
-        previousNumber = currentNumber;
-    }
-    currentNumber = null;
-    operator = '+';
-    populateDisplay();
 });
 
 document.getElementById('subtract-btn').addEventListener('click', function(){
-    if (previousNumber != null) {
-        previousNumber = operate(operator,previousNumber,currentNumber).toString();
+    if (currentNumber != null){
+        if (previousNumber != null) {
+            previousNumber = operate(operator,previousNumber,currentNumber).toString();
+        }
+        else {
+            previousNumber = currentNumber;
+        }
+        currentNumber = null;
+        operator = '-';
+        populateDisplay();
     }
-    else {
-        previousNumber = currentNumber;
-    }
-    currentNumber = null;
-    operator = '-';
-    populateDisplay();
 });
 
 document.getElementById('multiply-btn').addEventListener('click', function(){
-    if (previousNumber != null) {
-        previousNumber = operate(operator,previousNumber,currentNumber).toString();
+    if (currentNumber != null){
+        if (previousNumber != null) {
+            previousNumber = operate(operator,previousNumber,currentNumber).toString();
+        }
+        else {
+            previousNumber = currentNumber;
+        }
+        currentNumber = null;
+        operator = '*';
+        populateDisplay();
     }
-    else {
-        previousNumber = currentNumber;
-    }
-    currentNumber = null;
-    operator = '*';
-    populateDisplay();
 });
 
 document.getElementById('divide-btn').addEventListener('click', function(){
-    if (previousNumber != null) {
-        previousNumber = operate(operator,previousNumber,currentNumber).toString();
+    if (currentNumber != null){
+        if (previousNumber != null) {
+            previousNumber = operate(operator,previousNumber,currentNumber).toString();
+        }
+        else {
+            previousNumber = currentNumber;
+        }
+        currentNumber = null;
+        operator = '/';
+        populateDisplay();
     }
-    else {
-        previousNumber = currentNumber;
-    }
-    currentNumber = null;
-    operator = '/';
-    populateDisplay();
 });
